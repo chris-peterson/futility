@@ -1,6 +1,6 @@
 # Overview
 
-*F* ile *utility* (futility).
+**F**(ile) **utility** (`futility`).
 
 Utilities for dealing with files in [PowerShell](https://github.com/powershell/powershell#-powershell)
 
