@@ -1,11 +1,21 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Types>
   <Type>
-    <Name>Futility.File</Name>
+    <Name>System.IO.FileInfo</Name>
     <Members>
       <ScriptProperty>
-        <Name>Custom</Name>
-        <GetScriptBlock>$this.Tbd</GetScriptBlock>
+        <Name>SortableLastAccessTime</Name>
+        <GetScriptBlock>$this.LastAccessTime.ToString('u')</GetScriptBlock>
+      </ScriptProperty>
+    </Members>
+  </Type>
+
+  <Type>
+    <Name>System.IO.DirectoryInfo</Name>
+    <Members>
+      <ScriptProperty>
+        <Name>SortableLastAccessTime</Name>
+        <GetScriptBlock>$this.LastAccessTime.ToString('u')</GetScriptBlock>
       </ScriptProperty>
     </Members>
   </Type>
