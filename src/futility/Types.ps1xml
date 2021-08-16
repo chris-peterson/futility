@@ -4,8 +4,8 @@
     <Name>System.IO.FileInfo</Name>
     <Members>
       <ScriptProperty>
-        <Name>SortableLastAccessTime</Name>
-        <GetScriptBlock>$this.LastAccessTime.ToString('u')</GetScriptBlock>
+        <Name>SortableLastWriteTime</Name>
+        <GetScriptBlock>$this.LastWriteTime.ToString('u')</GetScriptBlock>
       </ScriptProperty>
     </Members>
   </Type>
@@ -14,8 +14,8 @@
     <Name>System.IO.DirectoryInfo</Name>
     <Members>
       <ScriptProperty>
-        <Name>SortableLastAccessTime</Name>
-        <GetScriptBlock>$this.LastAccessTime.ToString('u')</GetScriptBlock>
+        <Name>SortableLastWriteTime</Name>
+        <GetScriptBlock>$this.LastWriteTime.ToString('u')</GetScriptBlock>
       </ScriptProperty>
     </Members>
   </Type>

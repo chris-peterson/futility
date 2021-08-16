@@ -8,8 +8,8 @@ function Get-OldestLastWriteTime {
     )
 
     $Items |
-        Sort-Object SortableLastAccessTime |
-        Select-Object -First 1 -ExpandProperty SortableLastAccessTime
+        Sort-Object -Stable -Property SortableLastWriteTime |
+        Select-Object -First 1 -ExpandProperty SortableLastWriteTime
 }
 
 function Get-NewestLastWriteTime {
@@ -22,6 +22,6 @@ function Get-NewestLastWriteTime {
     )
 
     $Items |
-        Sort-Object SortableLastAccessTime |
-        Select-Object -Last 1 -ExpandProperty SortableLastAccessTime
+        Sort-Object -Stable -Property SortableLastWriteTime -Descending |
+        Select-Object -First 1 -ExpandProperty SortableLastWriteTime
 }
