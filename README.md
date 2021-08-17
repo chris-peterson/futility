@@ -1,8 +1,8 @@
 # Overview
 
-**F**(ile) **utility** (`futility`).
+**F**(ile) + **utility** = **futility**
 
-Utilities for dealing with files in [PowerShell](https://github.com/powershell/powershell#-powershell)
+Utilities for working with files in [PowerShell](https://github.com/powershell/powershell#-powershell)
 
 ## Status
 
@@ -15,4 +15,34 @@ Utilities for dealing with files in [PowerShell](https://github.com/powershell/p
 
 ```powershell
 Install-Module -Name futility
+```
+
+## Commands
+
+### Get-OldestLastWriteTime
+
+(aka `oldest`)
+
+Accepts pipeline input and finds the oldest modified time.  The format string defaults to `u`, but can be overridden by `-DateFormatString` (`-f`)
+
+```powershell
+gci | oldest -f 'yyyy-MM-dd'
+```
+
+```text
+2021-08-15
+```
+
+### Get-NewestLastWriteTime
+
+(aka `newest`)
+
+Accepts pipeline input and finds the newest modified time.  The format string defaults to `u`, but can be overridden by `-DateFormatString` (`-f`)
+
+```powershell
+gci | newest -f 'yyyy-MM-dd'
+```
+
+```text
+2021-08-17
 ```
