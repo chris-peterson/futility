@@ -4,7 +4,7 @@
     # RootModule = ''
     
     # Version number of this module.
-    ModuleVersion = '0.0.<auto-increment>'
+    ModuleVersion = '0.0.5'
     
     # Supported PSEditions
     # CompatiblePSEditions = @()
