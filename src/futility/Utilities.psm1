@@ -3,13 +3,23 @@ function Get-OldestLastWriteTime {
     [Alias("oldest")]
 
     param (
-        [Parameter(ValueFromPipeline = $true)]
-        $Items
+        [Parameter(Mandatory = $true, ValueFromPipeline=$true)]
+        $Item
     )
 
-    $Items |
-        Sort-Object -Stable -Property SortableLastWriteTime |
-        Select-Object -First 1 -ExpandProperty SortableLastWriteTime
+    begin {
+        $Data = @()
+    }
+
+    process {
+        $Data += $Item
+    }
+
+    end {
+        $Data |
+            Sort-Object SortableLastWriteTime |
+            Select-Object -First 1 -ExpandProperty SortableLastWriteTime
+    }
 }
 
 function Get-NewestLastWriteTime {
@@ -17,11 +27,21 @@ function Get-NewestLastWriteTime {
     [Alias("newest")]
 
     param (
-        [Parameter(ValueFromPipeline = $true)]
-        $Items
+        [Parameter(Mandatory = $true, ValueFromPipeline=$true)]
+        $Item
     )
 
-    $Items |
-        Sort-Object -Stable -Property SortableLastWriteTime -Descending |
-        Select-Object -First 1 -ExpandProperty SortableLastWriteTime
+    begin {
+        $Data = @()
+    }
+
+    process {
+        $Data += $Item
+    }
+
+    end {
+        $Data |
+            Sort-Object SortableLastWriteTime -Descending |
+            Select-Object -First 1 -ExpandProperty SortableLastWriteTime
+    }
 }
