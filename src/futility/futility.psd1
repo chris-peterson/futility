@@ -4,7 +4,7 @@
     # RootModule = ''
     
     # Version number of this module.
-    ModuleVersion = '0.0.5'
+    ModuleVersion = '0.0.${GITHUB_RUN_NUMBER}'
     
     # Supported PSEditions
     # CompatiblePSEditions = @()
@@ -98,16 +98,16 @@
             # Tags = @()
     
             # A URL to the license for this module.
-            LicenseUri = 'https://github.com/chris-peterson/futility/blob/master/LICENSE'
+            LicenseUri = 'https://github.com/${GITHUB_REPOSITORY}/blob/master/LICENSE'
     
             # A URL to the main website for this project.
-            ProjectUri = 'https://github.com/chris-peterson/futility'
+            ProjectUri = 'https://github.com/${GITHUB_REPOSITORY}'
     
             # A URL to an icon representing this module.
             # IconUri = ''
     
             # ReleaseNotes of this module
-            ReleaseNotes = 'Initial release'
+            ReleaseNotes = 'Minor bugfixes'
     
         } # End of PSData hashtable
     
