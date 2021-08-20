@@ -23,9 +23,13 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
 
+      - name: Substitute env vars in files
+        uses: chris-peterson/virgo
+        with:
+          templates: "src/futility.psd1"
+
       - name: Publish Module to PowerShell Gallery
-        uses: chris-peterson/publish-powershell-module-action@auto-increment-patch-version
-        id: publish-module
+        uses: pcgeek86/publish-powershell-module-action@v20
         with:
           NuGetApiKey: ${{ secrets.PS_GALLERY_KEY }}
     environment:
