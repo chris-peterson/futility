@@ -4,7 +4,7 @@
     # RootModule = ''
     
     # Version number of this module.
-    ModuleVersion = '0.1.${GITHUB_BUILD_NUMBER}'
+    ModuleVersion = '0.1.${GITHUB_RUN_NUMBER}'
     
     # Supported PSEditions
     # CompatiblePSEditions = @()
