@@ -26,7 +26,7 @@ jobs:
       - name: Substitute env vars in files
         uses: chris-peterson/virgo@main
         with:
-          templates: "src/futility.psd1"
+          templates: "src/futility/futility.psd1"
 
       - name: Publish Module to PowerShell Gallery
         uses: pcgeek86/publish-powershell-module-action@v20
