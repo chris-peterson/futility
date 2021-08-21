@@ -24,7 +24,7 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: Substitute env vars in files
-        uses: chris-peterson/virgo@main
+        uses: chris-peterson/virgo@v1
         with:
           templates: "src/futility/futility.psd1"
 
